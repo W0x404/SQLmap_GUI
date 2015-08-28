@@ -28,7 +28,7 @@ import os
 def main():
 	
 	def set_option():
-		query = 'python /home/anonymous/Documents/SECU/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get()
+		query = 'python /path/to/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get()
 		os.system('xterm -sb -e "%s|less" ' % (query) )
 		
 	#tkinter windows
