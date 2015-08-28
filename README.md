@@ -2,6 +2,10 @@
 # SQLmap_GUI
 [Alpha] Gui for SQLmap tool ( python 2., Tkinter, only for Linux )
 
+Help you to start a terminal with the right options. You keep using SQLmap in CLI but you start the tool easily & fastly.
+
+** Save time. Keep the control.**
+
 # How to Install ?
 
 * Change the pass of sqlmap in the right line. You can directly use sqlmap instead python /path/to/sqlmap.py.
