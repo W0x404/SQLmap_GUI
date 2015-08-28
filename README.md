@@ -5,7 +5,7 @@
 
 * Change the pass of sqlmap in the right line. You can directly use sqlmap instead python /path/to/sqlmap.py.
 
-* Install tkinter if not yet : sudo apt-get install python-tk (python 3: sudo apt-get install python3-tk)
+* Install tkinter if not yet : `sudo apt-get install python-tk` (**python 3**: `sudo apt-get install python3-tk`)
 
 * If you got the import error, change this:
 
