@@ -4,7 +4,7 @@
 
 Help you to start a terminal with the right options. You keep using SQLmap in CLI but you start the tool easily & fastly.
 
-** Save time. Keep the control.**
+*Save time. Keep the control.*
 
 # How to Install ?
 
