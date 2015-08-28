@@ -1,4 +1,4 @@
-[![Twitter](https://img.shields.io/badge/Twitter-W0x404-blue.svg)](http://www.twitter.com/W0x404)
+[![Twitter](https://img.shields.io/badge/Twitter-W0x404-blue.svg?style=flat-square)](http://www.twitter.com/W0x404)
 # SQLmap_GUI
 [Alpha] Gui for SQLmap tool ( python 2., Tkinter, only for Linux )
 
