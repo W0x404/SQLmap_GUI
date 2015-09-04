@@ -28,8 +28,8 @@ import os
 def main():
 	
 	def set_option():
-		query = 'python /path/to/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get()
-		os.system('xterm -sb -e "%s|less" ' % (query) )
+		query = 'python /usr/share/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get()
+		os.system("gnome-terminal -e 'bash -c \"%s; read -p \"Exit?\" \"'" % (query))
 		
 	#tkinter windows
 	fenetre = Tk()
@@ -75,7 +75,7 @@ def main():
 	
 	#tor field
 	tor_var = StringVar()
-	tor_checkbox = Checkbutton(FrameOption, text="tor", variable=tor_var, onvalue=" --tor --tor-type=SOCKS5 ")
+	tor_checkbox = Checkbutton(FrameOption, text="tor", variable=tor_var, offvalue="", onvalue=" --tor --tor-type=SOCKS5 ")
 	tor_checkbox.pack()
 	
 	#dump field
