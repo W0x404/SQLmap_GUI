@@ -1,8 +1,8 @@
 [![Social](https://img.shields.io/badge/Twitter-W0x404-blue.svg?style=flat-square)](http://www.twitter.com/W0x404)
 
 # SQLmap_GUI
-![Version](https://img.shields.io/badge/Version-0.1-lightgrey.svg?style=flat-square) 
-Gui for SQLmap tool ( python 2., Tkinter, only for Linux )
+![Version](https://img.shields.io/badge/Version-0.2-lightgrey.svg?style=flat-square) 
+Gui for SQLmap tool ( python 2.7, Tkinter, only for Linux )
 
 Help you to start a terminal with the right options. You keep using SQLmap in CLI but you start the tool easily & fastly.
 
