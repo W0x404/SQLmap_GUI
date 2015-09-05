@@ -10,7 +10,7 @@ Help you to start a terminal with the right options. You keep using SQLmap in CL
 
 # How to Install ?
 
-* Change the pass of sqlmap in the right line. You can directly use sqlmap instead python /path/to/sqlmap.py.
+* SQLmap_GUI use the default path of SQLmap : `/usr/share/sqlmap/sqlmap.py`. This is the same pass under kalilinux. You must install or re-copy SQLmap to this directory.
 
 * Install tkinter if not yet : `sudo apt-get install python-tk` (**python 3**: `sudo apt-get install python3-tk`)
 
