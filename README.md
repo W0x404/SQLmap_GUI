@@ -8,6 +8,8 @@ Help you to start a terminal with the right options. You keep using SQLmap in CL
 
 *Save time. Keep the control.*
 
+![GitHub Logo](https://pbs.twimg.com/media/COIyIB0WIAAgeMM.png:large)
+
 # How to Install ?
 
 * SQLmap_GUI use the default path of SQLmap : `/usr/share/sqlmap/sqlmap.py`. This is the same pass under kalilinux. You must install or re-copy SQLmap to this directory.
