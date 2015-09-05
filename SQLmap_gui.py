@@ -33,7 +33,7 @@ def main():
 		
 	#tkinter windows
 	fenetre = Tk()
-	fenetre.title = "SLQMap GUI"
+	fenetre.title("SLQMap GUI")
 	
 	# frame address
 	FrameAddress = LabelFrame(fenetre, text="Field", borderwidth=2, relief=GROOVE)
