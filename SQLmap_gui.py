@@ -30,10 +30,9 @@ def main():
 		return str(os.popen("echo $COLORTERM").read()).replace(" ","").replace("\n","")
 	
 	def set_option():
-		query = 'python /usr/share/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get() + batch_var.get()
+		query = 'python /usr/share/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get() + batch_var.get() + [""," -D "+database.get()+" "][database.get()!=""] + [""," -T "+tables.get()+" "][tables.get()!=""]
 		command = detect_term() + " -e 'bash -c \"%s; read -p \"Exit?\" \"'" % (query)
 		os.system(command)
-		
 		
 	#tkinter windows
 	fenetre = Tk()
