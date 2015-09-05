@@ -26,10 +26,14 @@ from tkMessageBox import *
 import os
 
 def main():
+	def detect_term():
+		return str(os.popen("echo $COLORTERM").read()).replace(" ","").replace("\n","")
 	
 	def set_option():
-		query = 'python /usr/share/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get()
-		os.system("gnome-terminal -e 'bash -c \"%s; read -p \"Exit?\" \"'" % (query))
+		query = 'python /usr/share/sqlmap/sqlmap.py ' + tor_var.get() + "-u '" + website.get() +"' "+ dump_var.get() + dbs_var.get() + tables_var.get() + random_var.get() + threads_var.get() + users_var.get() + passwords_var.get() + batch_var.get()
+		command = detect_term() + " -e 'bash -c \"%s; read -p \"Exit?\" \"'" % (query)
+		os.system(command)
+		
 		
 	#tkinter windows
 	fenetre = Tk()
@@ -100,19 +104,23 @@ def main():
 	
 	#threads field
 	threads_var = StringVar()
-	threads_checkbox = Checkbutton(FrameOption, text="threads", variable=threads_var, onvalue=" --threads 10", offvalue="")
+	threads_checkbox = Checkbutton(FrameOption, text="threads", variable=threads_var, onvalue=" --threads 10 ", offvalue="")
 	threads_checkbox.pack()
 	
 	#users field
 	users_var = StringVar()
-	users_checkbox = Checkbutton(FrameOption, text="users", variable=users_var, onvalue=" --users", offvalue="")
+	users_checkbox = Checkbutton(FrameOption, text="users", variable=users_var, onvalue=" --users ", offvalue="")
 	users_checkbox.pack()
 	
 	#passwords field
 	passwords_var = StringVar()
-	passwords_checkbox = Checkbutton(FrameOption, text="passwords", variable=passwords_var, onvalue=" --passwords", offvalue="")
+	passwords_checkbox = Checkbutton(FrameOption, text="passwords", variable=passwords_var, onvalue=" --passwords ", offvalue="")
 	passwords_checkbox.pack()
 	
+	#batch field
+	batch_var = StringVar()
+	batch_checkbox = Checkbutton(FrameOption, text="batch", variable=batch_var, onvalue=" --batch ", offvalue="")
+	batch_checkbox.pack()
 
 	#engine start
 	bouton = Button(FrameAddress, text="Start", command=set_option)
